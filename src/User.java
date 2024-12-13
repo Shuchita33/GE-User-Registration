@@ -30,20 +30,20 @@ public class User {
         this.phoneNumber = phone;
     }
 
-    public boolean validateFirstName() {
+    public boolean validateFirstName(String firstName) {
         String firstNamePattern = "^[A-Z][a-zA-Z]{2,}$";
-        return this.firstName.matches(firstNamePattern);
+        return firstName.matches(firstNamePattern);
     }
-    public boolean validateLastName() {
+    public boolean validateLastName(String lastName) {
         String lastNamePattern = "^[A-Z][a-zA-Z]{2,}$";
-        return this.lastName.matches(lastNamePattern);
+        return lastName.matches(lastNamePattern);
     }
-    public boolean validateEmail() {
+    public boolean validateEmail(String email) {
         String emailPattern = "^[a-zA-Z0-9_+&*-.]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}$";
-        return this.email.matches(emailPattern);
+        return email.matches(emailPattern);
     }
-    public boolean validateMobileNumber() {
+    public boolean validateMobileNumber(String phone) {
         String numberPattern = "^[0-9]{2} [0-9]{10}$";
-        return this.phoneNumber.matches(numberPattern);
+        return phone.matches(numberPattern);
     }
 }
