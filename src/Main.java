@@ -14,13 +14,25 @@ public class Main {
 
         boolean isValid = user.validateFirstName();
         if(isValid) {
-        	System.out.println("Valid");
+        	System.out.print("Enter Last Name: ");
+            String inputLastName = scanner.nextLine();
+
+            user.setLastName(inputLastName);
+
+            isValid = user.validateLastName();
+            if(isValid) {
+            	System.out.print("Valid");
+            }
+            else {
+            	System.out.println("Not Valid\n"
+        			+ "Last name starts with Cap and has minimum 3 characters\r\n");	
+            }
         }
         else {
-        	System.out.println("Name Not Valid\n"
+        	System.out.println("Not Valid\n"
         			+ "First name starts with Cap and has minimum 3 characters\r\n");
         }
-        
+
         
         scanner.close();
     }
