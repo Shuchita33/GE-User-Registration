@@ -50,11 +50,25 @@ public class Main {
             	System.out.println("Email Not Valid\n");
             }
             else {
-            	System.out.print("Valid");
             	break;
             }
         }
-        
+        //Input Mobile
+        while (true) {
+            System.out.print("Enter Mobile Number: ");
+            String phone = scanner.nextLine();
+            
+            user.setPhone(phone);
+            
+            boolean isValid = user.validateMobileNumber();
+
+            if (isValid) {
+            	//System.out.print("Valid");
+                break; 
+            } else {
+                System.out.println("Invalid Mobile Number.\nCountry code follow by space and 10 digit number");
+            }
+        }
         scanner.close();
           
         

@@ -2,6 +2,7 @@ public class User {
     private String firstName;
     private String lastName;
     private String email;
+    private String phoneNumber;
 
     public String getFirstName() {
         return firstName;
@@ -12,6 +13,9 @@ public class User {
     public String getEmail() {
         return email;
     }
+    public String getPhone() {
+        return phoneNumber;
+    }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -21,6 +25,9 @@ public class User {
     }
     public void setEmail(String email) {
         this.email = email;
+    }
+    public void setPhone(String phone) {
+        this.phoneNumber = phone;
     }
 
     public boolean validateFirstName() {
@@ -34,5 +41,9 @@ public class User {
     public boolean validateEmail() {
         String emailPattern = "^[a-zA-Z0-9_+&*-.]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}$";
         return this.email.matches(emailPattern);
+    }
+    public boolean validateMobileNumber() {
+        String numberPattern = "^[0-9]{2} [0-9]{10}$";
+        return this.phoneNumber.matches(numberPattern);
     }
 }
