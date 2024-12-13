@@ -65,6 +65,20 @@ public class Main {
                 System.out.println("Invalid Mobile Number.\nCountry code follow by space and 10 digit number");
             }
         }
+        // Input Password RULE 1
+        while (true) {
+            System.out.print("Enter Password : ");
+            String inputPassword = scanner.nextLine();
+            boolean isValid = user.validatePassword(inputPassword);
+
+            if (isValid) {
+            	user.setPassword(inputPassword);
+                break; 
+            } else {
+                System.out.println("Invalid Password. Must be at least 8 characters long.");
+            }
+        }
+        
         scanner.close();
           
         

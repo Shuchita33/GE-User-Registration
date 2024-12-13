@@ -3,6 +3,7 @@ public class User {
     private String lastName;
     private String email;
     private String phoneNumber;
+    private String password;
 
     public String getFirstName() {
         return firstName;
@@ -16,6 +17,9 @@ public class User {
     public String getPhone() {
         return phoneNumber;
     }
+    public String getPassword() {
+        return password;
+    }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -28,6 +32,9 @@ public class User {
     }
     public void setPhone(String phone) {
         this.phoneNumber = phone;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public boolean validateFirstName(String firstName) {
@@ -45,5 +52,8 @@ public class User {
     public boolean validateMobileNumber(String phone) {
         String numberPattern = "^[0-9]{2} [0-9]{10}$";
         return phone.matches(numberPattern);
+    }
+    public boolean validatePassword(String password) {
+        return password.length() >= 8;
     }
 }
