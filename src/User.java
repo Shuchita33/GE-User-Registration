@@ -53,7 +53,12 @@ public class User {
         String numberPattern = "^[0-9]{2} [0-9]{10}$";
         return phone.matches(numberPattern);
     }
+//    public boolean validatePassword(String password) {
+//        return password.length() >= 8;
+//    }
     public boolean validatePassword(String password) {
-        return password.length() >= 8;
+        String passwordPattern = "^(?=.*[A-Z]).{8,}$";
+        return password.matches(passwordPattern);
     }
+     
 }

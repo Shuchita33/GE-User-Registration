@@ -58,24 +58,26 @@ public class Main {
             boolean isValid = user.validateMobileNumber(phone);
 
             if (isValid) {
-            	System.out.print("Valid");
+            	//System.out.print("Valid");
             	user.setPhone(phone);
                 break; 
             } else {
                 System.out.println("Invalid Mobile Number.\nCountry code follow by space and 10 digit number");
             }
         }
-        // Input Password RULE 1
+        // Input Password RULE 1,RULE 2
         while (true) {
             System.out.print("Enter Password : ");
             String inputPassword = scanner.nextLine();
             boolean isValid = user.validatePassword(inputPassword);
 
             if (isValid) {
+            	System.out.print("Valid");
             	user.setPassword(inputPassword);
                 break; 
             } else {
-                System.out.println("Invalid Password. Must be at least 8 characters long.");
+                System.out.println("Invalid Password. Must be at least 8 characters long, "
+                		+ "at least 1 Upper Case.");
             }
         }
         
