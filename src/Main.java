@@ -77,7 +77,7 @@ public class Main {
                 break; 
             } else {
                 System.out.println("Invalid Password. Must be at least 8 characters long, "
-                		+ "at least 1 Upper Case.");
+                		+ "at least 1 Upper Case and a numeric char");
             }
         }
         
