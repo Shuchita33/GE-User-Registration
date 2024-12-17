@@ -62,15 +62,7 @@ public class User {
 		String passwordPattern = "^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$";
 	  return password.matches(passwordPattern);
 	}
-	public void validateMultipleEmails(String[] emails) {
-	    System.out.println("Validating Email Samples:");
-	    for (String email : emails) {
-	        if (validateEmail(email)) {
-	            System.out.println(email + " -- Valid");
-	        } else {
-	            System.out.println(email + " -- Invalid");
-	        }
-	    }
-	}
+	
+    
      
 }
