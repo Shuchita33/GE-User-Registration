@@ -56,14 +56,13 @@ public class User {
 //    public boolean validatePassword(String password) {
 //        return password.length() >= 8;
 //    }
-//    public boolean validatePassword(String password) {
-//        String passwordPattern = "^(?=.*[A-Z]).{8,}$";
-//        return password.matches(passwordPattern);
-//    }
 	public boolean validatePassword(String password) {
-		String passwordPattern = "^(?=.*[A-Z])(?=.*\\d).{8,}$";
+//      String passwordPattern = "^(?=.*[A-Z]).{8,}$";
+//		String passwordPattern = "^(?=.*[A-Z])(?=.*\\d).{8,}$";
+		String passwordPattern = "^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$";
 	  return password.matches(passwordPattern);
 	}
+	
     
      
 }
